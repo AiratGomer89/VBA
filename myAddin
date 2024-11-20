@@ -1462,7 +1462,7 @@ Sub Сохранить_и_Отправить_Скрин_Телеграм(CHAT_ID
     MassivFilesAdresses = Save_to_jpg_HQ
       
     Dim botToken As String
-    botToken = "6885374590:AAEx2jNtmM5Vk0RdzP4ScLYfke9UhfETqtg" '@Grafik_OTiZ_bot
+    botToken = "***YOUR_TELEGRAM_BOT_TOKEN"
         
     Dim FileName As String
     Dim SheetName As String
@@ -1570,7 +1570,7 @@ Function Save_to_jpg_HQ()
     Save_to_jpg_HQ = MassivFilesAdresses
     
 End Function
-Sub telegram_send_JPG(fullAdress As String, Optional CHAT_ID As String = "157551912", Optional botToken As String = "6885374590:AAEx2jNtmM5Vk0RdzP4ScLYfke9UhfETqtg")
+Sub telegram_send_JPG(fullAdress As String, Optional CHAT_ID As String = "***YOUR_TELEGRAM_CHAT_ID***", Optional botToken As String = "***YOUR_TELEGRAM_BOT_TOKEN***")
     ' Получаем размер файла в мегабайтах
         Dim fso As Object
         Set fso = CreateObject("Scripting.FileSystemObject")
@@ -1649,7 +1649,7 @@ Sub telegram_send_JPG(fullAdress As String, Optional CHAT_ID As String = "157551
     End With
   
 End Sub
-Sub sendTextToTelegram(Optional textMessage As String = "Привет!", Optional CHAT_ID As String = "157551912", Optional botToken As String = "6885374590:AAEx2jNtmM5Vk0RdzP4ScLYfke9UhfETqtg")
+Sub sendTextToTelegram(Optional textMessage As String = "Привет!", Optional CHAT_ID As String = "***YOUR_TELEGRAM_CHAT_ID***", Optional botToken As String = "***YOUR_TELEGRAM_BOT_TOKEN***")
        
     textMessage = Russian_utf(textMessage)
     
@@ -1671,7 +1671,7 @@ Sub СохранитьЛистИОтправитьТелеграм(CHAT_ID As St
     
     ' Отправляем файл в Telegram
     Dim botToken As String
-    botToken = "6885374590:AAEx2jNtmM5Vk0RdzP4ScLYfke9UhfETqtg" '@Grafik_OTiZ_bot
+    botToken = "***YOUR_TELEGRAM_BOT_TOKEN***"
     Call SendSheetToTelegram(SaveActiveSheetAsValues, CHAT_ID, botToken)
 End Sub
 Function SaveActiveSheetAsValues()
@@ -1725,7 +1725,7 @@ Function SaveActiveSheetAsValues()
     ' Возвращаем путь к сохраненному файлу
     SaveActiveSheetAsValues = filePath & FileName
 End Function
-Sub SendSheetToTelegram(filePath As String, Optional chatID As String = "157551912", Optional botToken As String = "6885374590:AAEx2jNtmM5Vk0RdzP4ScLYfke9UhfETqtg")
+Sub SendSheetToTelegram(filePath As String, Optional chatID As String = "***YOUR_TELEGRAM_CHAT_ID", Optional botToken As String = "***YOUR_TELEGRAM_BOT_TOKEN***")
     
     Dim URL As String
     Dim http As Object
@@ -1874,9 +1874,9 @@ End Function
 Sub send_Document()
 
     Const URL = "https://api.telegram.org/bot"
-    Const TOKEN = "6885374590:AAEx2jNtmM5Vk0RdzP4ScLYfke9UhfETqtg"
+    Const TOKEN = "***YOUR_TELEGRAM_BOT_TOKEN***"
     Const METHOD_NAME = "/sendDocument?"
-    Const CHAT_ID = "157551912"
+    Const CHAT_ID = "***YOUR_TELEGRAM_CHAT_ID***"
     
     Const FOLDER = "C:\test\"
     Const DOCUMENT_FILE = "qqq.xlsx"
