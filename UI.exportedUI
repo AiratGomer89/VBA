@@ -1,0 +1,26 @@
+<mso:cmd app="Excel" dt="0" />
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="yes"?> -->
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+	<ribbon startFromScratch="false">
+		<tabs>
+			<tab id="airatTab" label="Айрат">
+				<group id="airatGroup1" label="Медиа">					
+					<box id="box1" boxStyle="vertical">
+						<button id="airatButton1" label="Скриншот" imageMso="ChangePictureFileType" onAction="ScreenShotTelegramm" />						
+						<button id="airatButton2" label="ИИ" imageMso="DatabaseUserLevelSecurityWizard" onAction="AI_Ribbon" />	
+						<button id="airatButton3" label="В XML" imageMso="BuildingBlocksSaveTableOfContents" onAction="SaveToXML" />	
+						<button id="airatButton4" label="Из XML" imageMso="DatabaseLinedTableManager" onAction="ImportFromXML" />	
+					</box>					
+				</group>
+				<group id="airatGroup2" label="Структура">					
+					<box id="box2" boxStyle="vertical">						
+						<button id="airatButton5" label="Заполнить в право с Уровнями" imageMso="CurrentViewGallery" onAction="Fill_to_Right_Graded" />
+						<button id="airatButton6" label="Заполнить в право" imageMso="ViewGoForward" onAction="Fill_to_Right" />
+						<button id="airatButton7" label="Заполнить в лево" imageMso="ViewGoBack" onAction="Fill_to_Left" />
+						<button id="airatButton8" label="Выбрать Всё" imageMso="CalendarMonthDetailsSplitButton" onAction="SelectAll" />
+					</box>					
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
